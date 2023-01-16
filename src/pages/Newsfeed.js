@@ -3,8 +3,8 @@ import Posts from "../components/Posts";
 
 const Newsfeed = (props) => {
 
-    return <div>
-            <h2>Newsfeed Page</h2>
+    return <div className="newsfeed">
+            <h3>Newsfeed Page</h3>
             <Posts posts={props.posts} />
         </div>;
     };
