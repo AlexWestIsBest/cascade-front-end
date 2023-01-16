@@ -1,0 +1,42 @@
+// --------------------------
+// VARIABLES
+// --------------------------
+$maincolor: black;
+$contrastcolor: white;
+
+// mixins - aka presets
+@mixin white-text-black-bg {
+  color: $contrastcolor;
+  background-color: $maincolor;
+}
+
+@mixin black-text-white-bg {
+  color: $maincolor;
+  background-color: $contrastcolor;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  @include white-text-black-bg;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+.main {
+  @include black-text-white-bg;
+  padding: 1rem;
+}
+.footer {
+  @include black-text-white-bg;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
