@@ -2,17 +2,19 @@
 Cascade FrontEnd is the front end for Cascade, a social media site built using the MERN stack. This site was built in collaboration with Alex West and Victoria Onyema as a mid term project during a General Assembly Software Immersive bootcamp.
 
 * Roles:
- * Owner / Vision - Alex
- * Product Manager / Docs - Patrick
- * Design / CSS - Victoria
- * Front End - Alex, Patrick, Victoria
- * Back End - Patrick
+  * Owner / Vision - Alex
+  * Product Manager / Docs - Patrick
+  * Design / CSS - Victoria
+  * Front End - Alex, Patrick, Victoria
+  * Back End - Patrick
 * Github:
- * FrontEnd - GitHub - AlexWestIsBest/cascade-frontend
- * BackEnd - GitHub - AlexWestIsBest/cascade-backend
+  * FrontEnd - GitHub - AlexWestIsBest/cascade-frontend
+  * BackEnd - GitHub - AlexWestIsBest/cascade-backend
 * Trello: https://trello.com/invite/b/CNGnsPwh/ATTIc6d50f7e1841f4617dafd0c7bd059c6e35BA25AB/socialmediasite
-* Heroku: TBD
-
+* Heroku: 
+   * BackEnd:  https://cascadesocial.herokuapp.com/
+   * FrontEnd: 
+   
 ## Technologies Used: 
 - JavaScript / jQuery
 - Node
