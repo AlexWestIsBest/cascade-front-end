@@ -1,9 +1,15 @@
-
+import Navigation from './components/Navigation';
+import Header from './components/Header';
+import Main from './components/Main';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to the frontend!</h1>
+      <Header />
+      <Navigation />
+      <Main />
+      <Footer />
     </div>
   );
 }
