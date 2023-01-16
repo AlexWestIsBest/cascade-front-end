@@ -1,4 +1,3 @@
-import React from "react";
 import {Link} from "react-router-dom";
 
 const Navigation = (props) => {
@@ -11,7 +10,7 @@ const Navigation = (props) => {
                 <div>Newsfeed</div>
             </Link>
             <Link to="/about">
-                <div>About</div>
+                <div>Contact Us / About</div>
             </Link>
         </div>
     );

@@ -1,8 +1,11 @@
-import React from "react";
+import  { useState } from "react";
+import Posts from "../components/Posts";
 
-const Newsfeed = () => {
-    return <div>
-            <h2>Newsfeed Page</h2>
+const Newsfeed = (props) => {
+
+    return <div className="newsfeed">
+            <h3>Newsfeed Page</h3>
+            <Posts posts={props.posts} />
         </div>;
     };
 
