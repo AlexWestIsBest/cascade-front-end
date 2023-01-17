@@ -5,7 +5,7 @@ const Newsfeed = (props) => {
 
     return <div className="newsfeed">
             <h3>Newsfeed Page</h3>
-            <Posts posts={props.posts} />
+            <Posts posts={props.posts} deletePost={props.deletePost} />
         </div>;
     };
 

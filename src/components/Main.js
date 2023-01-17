@@ -8,17 +8,24 @@ import Newsfeed from "../pages/Newsfeed";
 const Main = (props) => {
     const [posts, setPosts] = useState(null);
 
-    const URL = "https://cascadesocial.herokuapp.com/posts"
+    const URL = "https://cascadesocial.herokuapp.com/posts/"
 
     const getPosts = async () => {
         const response = await fetch(URL);
         const postsArr = await response.json();
         setPosts(postsArr);
-      }
+    }
       
+    const deletePost = async (id) => {
+        await fetch(URL + id, {
+            method: 'DELETE'
+        })
+        getPosts()
+    }
+
     useEffect(() => {
         getPosts();
-      }, []);
+    }, []);
     
     return (
         <div className="main">
@@ -28,6 +35,7 @@ const Main = (props) => {
                 <Route path="/newsfeed" 
                     element={<Newsfeed 
                         posts={posts}
+                        deletePost={deletePost}
                     />} 
                 />
             </Routes>
