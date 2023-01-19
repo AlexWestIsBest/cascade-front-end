@@ -1,7 +1,6 @@
 import {Link} from "react-router-dom";
 import React, { useState } from 'react';  import { MDBIcon} from 'mdbreact';
   import 'bootstrap/dist/css/bootstrap.css';
-import Dropdown from 'react-bootstrap/Dropdown';
 import {
     MDBContainer,
     MDBNavbar,
@@ -18,7 +17,6 @@ import {
 
 const Navigation = (props) => {
 
-    const [showNavExternal2, setShowNavExternal2] = useState(false);
     const [showNav, setShowNav] = useState(false);
 
         return (
@@ -51,31 +49,6 @@ const Navigation = (props) => {
         </MDBCollapse>
       </MDBContainer>
     </MDBNavbar>
-{/* 
-             <div style={{ display: 'block', 
-                  width: 900, 
-                  padding: 30 }}>
-      <Dropdown className="ms-auto">
-        <Dropdown.Toggle >
-        <MDBIcon icon='bars' fas />
-        </Dropdown.Toggle>
-        <Dropdown.Menu>
-          <Dropdown.Item href="/">
-            Home 
-          </Dropdown.Item>
-          <Dropdown.Item as ={Link} to="/newsfeed">
-            Newsfeed
-          </Dropdown.Item>
-          <Dropdown.Item href="/about">
-            About Us
-          </Dropdown.Item>
-          <Dropdown.Item href="/login">
-            Login
-          </Dropdown.Item>
-        </Dropdown.Menu>
-      </Dropdown>
-
-    </div> */}
           </>
         );      
 

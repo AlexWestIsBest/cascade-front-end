@@ -51,6 +51,9 @@ font-size: larger;
 h1{
   color: black;
 }
+.title{
+  font-weight: 600;
+}
 
 .header {
   @include white-text-black-bg;
