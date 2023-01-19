@@ -1,3 +1,5 @@
+import { MDBIcon } from 'mdb-react-ui-kit';
+
 const ActionBar = (props) => {
 
     const handleDelete = () => {
@@ -6,8 +8,8 @@ const ActionBar = (props) => {
 
     return (
         <div className="actionBar">
-            <button>Like</button>
-            <button onClick={handleDelete}>Delete</button>
+            <button><MDBIcon far icon="thumbs-up" /></button>
+            <button onClick={handleDelete}><MDBIcon fas icon="trash-alt" /></button>
         </div>
     );
 }

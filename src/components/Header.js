@@ -1,9 +1,10 @@
+import Navigation from "./Navigation";
+
 
 const Header = (props) => {
     return (
         <div className="header">
-            <h1>Cascade Header</h1>
-            <button>Login</button>
+            <h1>Cascade</h1>
         </div>
     );
 }
