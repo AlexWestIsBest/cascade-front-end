@@ -12,9 +12,6 @@ const Navigation = (props) => {
             <Link to="/about">
                 <div>Contact Us / About</div>
             </Link>
-            <Link to="/login">
-                <div>Contact Us / About</div>
-            </Link>
         </div>
     );
 }
