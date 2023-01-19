@@ -12,7 +12,7 @@
 }
 
 $maincolor: #0a369d;
-$contrastcolor: #fdfdfd;
+$contrastcolor: #f0f0f0;
 
 // mixins - aka presets
 @mixin white-text-black-bg {
@@ -22,6 +22,7 @@ $contrastcolor: #fdfdfd;
 
 @mixin black-text-white-bg {
   color: $maincolor;
+  background-color: $contrastcolor;
 }
 
 * {
@@ -59,7 +60,7 @@ h1{
   text-align: center;
   h1 {
     font-family: 'Francois One', sans-serif;
-    
+    background-color: #0a369d;
   }
 }
 .navbar {
@@ -68,14 +69,12 @@ h1{
   box-shadow: 5px 8px 8px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
   border-radius: 15px;
 }
-.menuicon{
-  transform: scale(1.8);
-}
 .main {
   @include black-text-white-bg;
   padding: 1rem;
   display: flex;
   justify-content: center;
+  margin-top: 50px
 }
 .footer {
   @include black-text-white-bg;
@@ -90,6 +89,7 @@ h1{
   width: 100%;
 }
 .post {
+  background-color: white;
   border-style: solid;
   border-width: 1px;
   border-radius: 5px;
@@ -97,9 +97,10 @@ h1{
   padding: 0.5rem;
 }
 .postImg {
-  width: 200px;
+  width: 25rem;
 }
 .actionBar {
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -109,4 +110,24 @@ h1{
     border-radius: 0.5rem;
     cursor: pointer;
   }
+}
+input:hover, textarea:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+.editableText {
+  background-color: transparent;
+  border: 0;
+  padding: 0.2em;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.editableTextArea {
+  background-color: transparent;
+  border: 0;
+  padding: 0.2em;
+  resize: none;
+  overflow: hidden;
+  min-height: 14px;
+  width: 25rem;
 }

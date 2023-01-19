@@ -1,11 +1,11 @@
-// import  { useState } from "react";
+import  { useState } from "react";
 import Post from "./Post";
 
 const Posts = (props) => {
     const loaded = () => {
         return props.posts.map((post) => (
             <div key={post._id} className="post">
-                <Post post={post} />
+                <Post post={post} id={post._id} URL={props.URL} getPosts={props.getPosts} />
             </div>
         ));
     };
