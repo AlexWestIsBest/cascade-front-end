@@ -1,6 +1,3 @@
-import Navigation from "./Navigation";
-
-
 const Header = (props) => {
     return (
         <div className="header">
