@@ -22,6 +22,7 @@ const EditableText = ({ value, setValue, updatePost, id }) => {
 
     return(
         <input
+            className="editableText"
             type="text"
             value={currentValue}
             onChange={onChange}
