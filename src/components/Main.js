@@ -15,13 +15,6 @@ const Main = (props) => {
         const postsArr = await response.json();
         setPosts(postsArr);
     }
-      
-    const deletePost = async (id) => {
-        await fetch(URL + id, {
-            method: 'DELETE'
-        })
-        getPosts()
-    }
 
     useEffect(() => {
         getPosts();
@@ -35,7 +28,8 @@ const Main = (props) => {
                 <Route path="/newsfeed" 
                     element={<Newsfeed 
                         posts={posts}
-                        deletePost={deletePost}
+                        getPosts={getPosts}
+                        URL={URL}
                     />} 
                 />
             </Routes>

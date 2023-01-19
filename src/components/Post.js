@@ -1,12 +1,35 @@
 import ActionBar from "./ActionBar";
+import { useState } from "react";
+import EditableText from "./EditableText";
+import EditableTextArea from "./EditableTextArea";
 
 const Post = (props) => {
+    const [titleValue, setTitleValue] = useState(props.post.title)
+    const [contentValue, setContentValue] = useState(props.post.content)
+
+    const updatePost = async (id, updatedPost) => {
+        await fetch(props.URL + id, {
+            method: 'PUT',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(updatedPost)
+        })
+    }
+
+    const deletePost = async (id) => {
+        await fetch(props.URL + id, {
+            method: 'DELETE'
+        })
+        props.getPosts()
+    }
+
     return (
         <>
-            <h3>{props.post.title}</h3>
+            <EditableText id={props.id} value={titleValue} setValue={setTitleValue} updatePost={updatePost} URL={props.URL} />
             <p><img className="postImg" src={props.post.image} alt={props.post.title} /></p>
-            <p>{props.post.content}</p>
-            <ActionBar id={props.id} deletePost={props.deletePost} /> 
+            <EditableTextArea id={props.id} value={contentValue} setValue={setContentValue} updatePost={updatePost} URL={props.URL} />
+            <ActionBar id={props.id} URL={props.URL} deletePost={deletePost} /> 
         </>
     );
 }
