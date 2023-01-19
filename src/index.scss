@@ -2,7 +2,7 @@
 // VARIABLES
 // --------------------------
 $maincolor: #0a369d;
-$contrastcolor: #cfdee7;
+$contrastcolor: #f0f0f0;
 
 // mixins - aka presets
 @mixin white-text-black-bg {
@@ -53,6 +53,7 @@ $contrastcolor: #cfdee7;
   width: 100%;
 }
 .post {
+  background-color: white;
   border-style: solid;
   border-width: 1px;
   border-radius: 5px;
@@ -60,9 +61,10 @@ $contrastcolor: #cfdee7;
   padding: 0.5rem;
 }
 .postImg {
-  width: 200px;
+  width: 25rem;
 }
 .actionBar {
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,8 +75,23 @@ $contrastcolor: #cfdee7;
     cursor: pointer;
   }
 }
+input:hover, textarea:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+.editableText {
+  background-color: transparent;
+  border: 0;
+  padding: 0.2em;
+  font-size: 1.5em;
+  font-weight: bold;
+}
 .editableTextArea {
+  background-color: transparent;
+  border: 0;
+  padding: 0.2em;
   resize: none;
   overflow: hidden;
   min-height: 14px;
+  width: 25rem;
 }
