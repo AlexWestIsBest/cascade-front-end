@@ -17,9 +17,9 @@ root.render(
     <Router>
       <App />
         <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/about' element={<About/>}/>
-          <Route path='/newsfeed' element={<Newsfeed />}/>
+          <Route path='/'/>
+          <Route path='/about' />
+          <Route path='/newsfeed' />
         </Routes>
     </Router>
   </React.StrictMode>
