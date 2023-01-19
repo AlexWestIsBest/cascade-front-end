@@ -3,7 +3,6 @@ import { useState } from 'react'
 const EditableText = ({ value, setValue, updatePost, id }) => {
     const [currentValue, setCurrentValue] = useState(value)
     const onChange = (event) => setCurrentValue(event.target.value)
-    console.log(setCurrentValue)
 
     const onKeyDown = (event) => {
         if (event.key === 'Enter') {

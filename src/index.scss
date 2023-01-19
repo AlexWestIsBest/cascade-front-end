@@ -73,3 +73,8 @@ $contrastcolor: #cfdee7;
     cursor: pointer;
   }
 }
+.editableTextArea {
+  resize: none;
+  overflow: hidden;
+  min-height: 14px;
+}
