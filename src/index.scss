@@ -81,8 +81,9 @@ h1{
   margin-top: 3rem;
 }
 .footer {
-  @include black-text-white-bg;
-  padding: 1rem;
+  // @include black-text-white-bg;
+  // padding: 1rem;
+  margin: 1rem;
   display: flex;
   justify-content: center;
 }
@@ -100,7 +101,7 @@ h1{
 }
 .postImg {
   width: 20rem;
-  margin-top: -1.75rem;
+  margin-top: -0.25rem;
 }
 .actionBar {
   // background-color: transparent;
@@ -123,7 +124,7 @@ input:hover, textarea:hover {
   border: 0;
   padding: 0.25em;
   padding-bottom: 0.15em;
-  margin: 0.25rem 1.25rem 1.25rem 1.25rem;
+  margin: 0.25rem 1.25rem -2rem 1.25rem;
   font-size: 1.2em;
   font-weight: bold;
   width: 80%
