@@ -48,9 +48,9 @@ ul.navbar-nav.w-100 {
   font-family: 'Francois One', sans-serif;
   font-size: larger;
 }
-h1{
-  color: black;
-}
+// h1{
+//   color: black;
+// }
 
 .header {
   @include white-text-black-bg;
@@ -58,10 +58,10 @@ h1{
   display: flex;
   justify-content: space-between;
   text-align: center;
-  h1 {
-    font-family: 'Francois One', sans-serif;
-    background-color: #0a369d;
-  }
+  // h1 {
+  //   font-family: 'Francois One', sans-serif;
+  //   background-color: #0a369d;
+  // }
 }
 .navbar {
   display: flex;
@@ -75,7 +75,7 @@ h1{
   padding: 1rem;
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 1.6rem;
 }
 .footer {
   // @include black-text-white-bg;
@@ -142,11 +142,24 @@ input:hover, textarea:hover {
   min-height: 16px;
   width: 100%;
 }
+
+// "Create Post" card
 .createPost {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  text-align: center;
+  margin: 0.5rem;
+
 }
 .createInput {
   width: 100%;
+  margin-top: .3rem;
+  border-radius: 1rem;
+  padding-left: 1rem;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+}
+.createSubmit {
+  width: 25%;
+  margin-top: 1.2rem;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
 }
