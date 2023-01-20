@@ -42,7 +42,7 @@ html{
 ul.navbar-nav.w-100 {
   display: flex;
   justify-content: flex-end;
-  
+  z-index:100;
 }
 .logo{
   font-family: 'Francois One', sans-serif;
