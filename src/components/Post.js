@@ -43,6 +43,22 @@ const Post = (props) => {
         )
     }
 
+    if (props.post.content === "") {
+        return (
+            <>
+                <Card style={{ width: '30rem' }}>
+                    <Card.Title>
+                        <EditableText id={props.id} value={titleValue} setValue={setTitleValue} updatePost={updatePost} URL={props.URL} />
+                    </Card.Title>
+                    <Card.Img variant="top" className="postImg" src={props.post.image} alt={props.post.title} />
+                    <Card.Body>
+                        <ActionBar id={props.id} URL={props.URL} deletePost={deletePost} /> 
+                    </Card.Body>
+                </Card>
+            </>
+        );
+    }
+
     return (
         <>
             <Card style={{ width: '30rem' }}>
@@ -58,7 +74,7 @@ const Post = (props) => {
                 </Card.Body>
             </Card>
         </>
-    );
+    )
 }
 
 export default Post;
