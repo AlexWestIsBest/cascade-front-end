@@ -46,13 +46,10 @@ ul.navbar-nav.w-100 {
 }
 .logo{
   font-family: 'Francois One', sans-serif;
-font-size: larger;
+  font-size: larger;
 }
 h1{
   color: black;
-}
-.title{
-  font-weight: 600;
 }
 
 .header {
@@ -123,7 +120,7 @@ h1{
   }
 }
 input:hover, textarea:hover {
-  background-color: #f0f0f0;
+  background-color: rgb(245, 245, 245);
   cursor: pointer;
 }
 .editableText {
@@ -143,5 +140,13 @@ input:hover, textarea:hover {
   resize: none;
   overflow: hidden;
   min-height: 16px;
+  width: 100%;
+}
+.createPost {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.createInput {
   width: 100%;
 }

@@ -34,7 +34,7 @@ const Post = (props) => {
                 </Card.Title>
                 <Card.Body>
                     <Card.Text>
-                    <EditableTextArea id={props.id} value={contentValue} setValue={setContentValue} updatePost={updatePost} URL={props.URL} />
+                        <EditableTextArea id={props.id} value={contentValue} setValue={setContentValue} updatePost={updatePost} URL={props.URL} />
                     </Card.Text>
                     <ActionBar id={props.id} URL={props.URL} deletePost={deletePost} /> 
                 </Card.Body>
