@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Navigation from './components/Navigation';
+import Logout from './components/Logout';
 import Main from './components/Main';
 import Footer from './components/Footer';
 //bootstrap
@@ -13,6 +14,11 @@ function App() {
       <div className= "container">
         <Navigation 
           user={user}
+          setUser={setUser}
+        />
+        <Logout 
+          user={user}
+          setUser={setUser}
         />
         <Main 
           user={user}
