@@ -1,6 +1,11 @@
 import { MDBIcon } from 'mdb-react-ui-kit';
+import {useState} from 'react'
 
 const ActionBar = (props) => {
+    const [count, setCount]=useState(0);
+    const handleIncrement=()=>{
+        setCount(count + 1)
+    }
 
     const handleDelete = () => {
         props.deletePost(props.id)
@@ -8,7 +13,7 @@ const ActionBar = (props) => {
 
     return (
         <div className="actionBar">
-            <button><MDBIcon far icon="thumbs-up" /></button>
+            <button onClick={handleIncrement}><MDBIcon far icon="thumbs-up" />{count} </button>
             <button onClick={handleDelete}><MDBIcon fas icon="trash-alt" /></button>
         </div>
     );
