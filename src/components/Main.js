@@ -6,6 +6,9 @@ import About from "../pages/About";
 import Newsfeed from "../pages/Newsfeed";
 import Form from './common/Form';
 import Reset from '../pages/Reset';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { logIn, register } from '../firebase';
 
 const Main = ({ user, setUser}) => {
     const navigate = useNavigate();
@@ -23,10 +26,53 @@ const Main = ({ user, setUser}) => {
         setPosts(postsArr);
     }
 
+    // Check for user state and route accordingly
+    useEffect(() => {
+        if(user) {
+            // setCurrentUser(user)
+            navigate('/')
+        } else {
+            // setCurrentUser(null)
+            navigate('/login')
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [user])
+
     useEffect(() => {
         getPosts();
     }, []);
     
+    // Create a function to handle the form submission
+    const handleAction = async (type) => {
+        if (type === "register") {
+            await register(email, password)
+                .then((response) => {
+                    // store the user token state
+                    setUser(response.user)
+                    navigate('/')
+                }).catch((error) => {
+                    if (error.code === 'auth/email-already-in-use') {
+                    toast.error('Email Already in Use');
+                    }
+                })
+        }
+        if (type === "login") {
+            await logIn(email, password)
+                .then((response) => {
+                    // store the user state
+                    setUser(response.user)
+                    navigate('/')
+                }).catch((error) => {
+                    if(error.code === 'auth/wrong-password'){
+                    toast.error('Invalid Password');
+                    }
+                    if(error.code === 'auth/user-not-found'){
+                    toast.error('Invalid Email');
+                    }
+                })
+        } 
+    }
+
     return (
         <div className="main">
             <Routes>
@@ -44,7 +90,7 @@ const Main = ({ user, setUser}) => {
                             title="Login"
                             setEmail={setEmail}
                             setPassword={setPassword}
-                            // handleAction={() => handleAction("login")}
+                            handleAction={() => handleAction("login")}
                         />} 
                 />
                 <Route path="/register" 
@@ -53,7 +99,7 @@ const Main = ({ user, setUser}) => {
                         title="Register"
                         setEmail={setEmail}
                         setPassword={setPassword}
-                        // handleAction={() => handleAction("register")}
+                        handleAction={() => handleAction("register")}
                         />} 
                 />
                 <Route path='/reset' 
@@ -70,6 +116,7 @@ const Main = ({ user, setUser}) => {
                     />} 
                 />
             </Routes>
+            <ToastContainer />
         </div>
     );
 }
