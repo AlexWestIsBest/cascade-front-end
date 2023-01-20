@@ -7,9 +7,9 @@ export default function BasicTextFields({title, setPassword, setEmail, handleAct
         return (
             <div>
                 <div className="formPage">
-                    <h3>
-                        {title} 
-                    </h3>
+                    <h5>
+                        Welcome! Please login to continue. 
+                    </h5>
                         <div className='loginForm'>
                             <span>
                                 <label htmlFor="email">Email: </label>
