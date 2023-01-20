@@ -4,7 +4,6 @@ import EditableText from "./EditableText";
 import EditableTextArea from "./EditableTextArea";
 import Card from 'react-bootstrap/Card';
 
-
 const Post = (props) => {
     const [titleValue, setTitleValue] = useState(props.post.title)
     const [contentValue, setContentValue] = useState(props.post.content)
@@ -26,23 +25,56 @@ const Post = (props) => {
         props.getPosts()
     }
 
+    if (props.post.image === "") {
+        return (
+            <>
+            <Card style={{ width: '30rem' }}>
+                <Card.Title>
+                    <EditableText id={props.id} value={titleValue} setValue={setTitleValue} updatePost={updatePost} URL={props.URL} />
+                </Card.Title>
+                <Card.Body>
+                    <Card.Text>
+                        <EditableTextArea id={props.id} value={contentValue} setValue={setContentValue} updatePost={updatePost} URL={props.URL} />
+                    </Card.Text>
+                    <ActionBar id={props.id} URL={props.URL} deletePost={deletePost} /> 
+                </Card.Body>
+            </Card>
+        </>
+        )
+    }
+
+    if (props.post.content === "") {
+        return (
+            <>
+                <Card style={{ width: '30rem' }}>
+                    <Card.Title>
+                        <EditableText id={props.id} value={titleValue} setValue={setTitleValue} updatePost={updatePost} URL={props.URL} />
+                    </Card.Title>
+                    <Card.Img variant="top" className="postImg" src={props.post.image} alt={props.post.title} />
+                    <Card.Body>
+                        <ActionBar id={props.id} URL={props.URL} deletePost={deletePost} /> 
+                    </Card.Body>
+                </Card>
+            </>
+        );
+    }
+
     return (
         <>
-        <Card style={{ width: '30rem' }}>
-        <Card.Title>
-        <EditableText id={props.id} value={titleValue} setValue={setTitleValue} updatePost={updatePost} URL={props.URL} />
-        </Card.Title>
-        <Card.Img variant="top" className="postImg" src={props.post.image} alt={props.post.title} />
-        <Card.Body>
-        <Card.Text>
-        <EditableTextArea id={props.id} value={contentValue} setValue={setContentValue} updatePost={updatePost} URL={props.URL} />
-        </Card.Text>
-        <ActionBar id={props.id} URL={props.URL} deletePost={deletePost} /> 
-
-      </Card.Body>
-    </Card>
+            <Card style={{ width: '30rem' }}>
+                <Card.Title>
+                    <EditableText id={props.id} value={titleValue} setValue={setTitleValue} updatePost={updatePost} URL={props.URL} />
+                </Card.Title>
+                <Card.Img variant="top" className="postImg" src={props.post.image} alt={props.post.title} />
+                <Card.Body>
+                    <Card.Text>
+                    <EditableTextArea id={props.id} value={contentValue} setValue={setContentValue} updatePost={updatePost} URL={props.URL} />
+                    </Card.Text>
+                    <ActionBar id={props.id} URL={props.URL} deletePost={deletePost} /> 
+                </Card.Body>
+            </Card>
         </>
-    );
+    )
 }
 
 export default Post;

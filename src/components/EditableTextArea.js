@@ -21,9 +21,9 @@ const EditableTextArea = ({ value, setValue, updatePost, id }) => {
     }
 
     const onInput = (target) => {
-        if (target.scrollHeight > 33) {
+        if (target.scrollHeight > 16) {
             target.style.height = "5px"
-            target.style.height = (target.scrollHeight - 16) + "px"
+            target.style.height = (target.scrollHeight +5) + "px"
         }
     }
 
