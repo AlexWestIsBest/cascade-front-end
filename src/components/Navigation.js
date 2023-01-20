@@ -12,6 +12,7 @@ import {
     // MDBNavbarLink,
     MDBCollapse
   } from 'mdb-react-ui-kit';
+import Logout from './Logout';
 
 const Navigation = ({ user, setUser}) => {
 
@@ -58,6 +59,10 @@ const Navigation = ({ user, setUser}) => {
                     </MDBNavbarNav>
                     </MDBCollapse>
                 </MDBContainer>
+                <Logout 
+                    user={user}
+                    setUser={setUser}
+                />
             </MDBNavbar>
 
           </>
