@@ -5,7 +5,7 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Newsfeed from "../pages/Newsfeed";
 
-const Main = (props) => {
+const Main = ({ user, setUser}) => {
     const [posts, setPosts] = useState(null);
 
     const URL = "https://cascadesocial.herokuapp.com/posts/"
