@@ -30,11 +30,67 @@ const Home = ({ user }) => {
         } 
     }, [user])
 
+    const handleChange = (event) => {
+        setProfile({ ...profile, [event.target.name]: event.target.value });
+    };
+
     const currentUser = user ? user : formUser;
 
     // test for empty displayName
     if (!currentUser.displayName) {
         currentUser.displayName = "No User Info"
+    }
+
+    const updateProfile = async (e) => {
+        e.preventDefault();
+        const name = profile.displayName;
+        const email = profile.email;
+        try {
+            await updateFbEmail(email).then(() => {
+                // Update successful.
+                // console.log('Home Update successful.')
+                })
+        } catch (error) {
+            console.log(error)
+            if(error.code === 'auth/email-already-in-use'){
+                toast.error('Account Already Exists');
+            }
+        }
+        try {
+            await updateFbProfile(name, email).then(() => {
+                // Update successful.
+                // console.log('Home Update successful.')
+                })
+        } catch (error) {
+            // console.log(error)
+            toast.error('Error Updating Account');
+        }
+        // logOut();
+        navigate('/')
+    }
+
+    const handleNewPassword = (event) => {
+        setNewPassword(event.target.value);
+    };
+
+    const updatePassword = async (e) => {
+        e.preventDefault();
+        try {
+            await updateFbPassword(currentUser, newPassword).then(() => {
+                // Update successful.
+                toast.success('Password Updated')
+                logOut();
+                navigate('/login');
+                })
+        } catch (error) {
+            // console.log(error)
+            toast.error('Error Updating Password');
+        }
+    }
+            
+    const delAccount = async () => {
+        await deleteAccount();
+        navigate('/login');
     }
 
     // loaded state
@@ -63,7 +119,7 @@ const Home = ({ user }) => {
                                 type="text" 
                                 name="email" 
                                 value={profile.email}
-                                // onChange={handleChange}
+                                onChange={handleChange}
                             />
                         </span>
                         <span>
@@ -72,13 +128,13 @@ const Home = ({ user }) => {
                                 type="text" 
                                 name="displayName"
                                 value={profile.displayName}
-                                // onChange={handleChange}
+                                onChange={handleChange}
                             />
                         </span>
                         <button
                             type="button"
                             className='btn btn-sm btn-success'
-                            // onClick={updateProfile}
+                            onClick={updateProfile}
                             ><span className="bi bi-archive"></span>&nbsp;Update Profile
                         </button>
                 </form>
@@ -89,13 +145,13 @@ const Home = ({ user }) => {
                                 type="password" 
                                 name="newPassword" 
                                 value={newPassword}
-                                // onChange={handleNewPassword} 
+                                onChange={handleNewPassword} 
                             />
                         </span>
                         <button
                             type="button"
                             className='btn btn-sm btn-success'
-                            // onClick={updatePassword}
+                            onClick={updatePassword}
                             ><span className="bi bi-arrow-clockwise"></span>&nbsp;Set Password
                         </button>
                 </form>
@@ -104,13 +160,13 @@ const Home = ({ user }) => {
                     <button
                         type="button"
                         className='btn btn-sm btn-danger' 
-                        // onClick={delAccount}
+                        onClick={delAccount}
                         ><span className="bi-trash"></span>&nbsp;Delete Account
                     </button>
                 </div>
                 <p>Post history coming soon...</p>
             </div>
-            
+            <ToastContainer />
             </section>
         )
     }
