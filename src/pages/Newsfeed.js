@@ -10,8 +10,8 @@ const Newsfeed = (props) => {
                     <form action="">
                         <input className="createInput" type="text" name="title" placeholder="Title" /><br />
                         <input className="createInput" type="text" name="image" placeholder="Image URL" /><br />
-                        <input className="createInput" type="text" name="content" placeholder="Say something fun!" /><br />
-                        <input className="createSubmit" type="submit" value="Post" />
+                        <input className="createInput" type="text" name="content" placeholder="Say something fun!" /><br /><br />
+                        <button type="button" className='btn btn-primary'>Post</button>
                     </form>
                 </Card.Body>
             </Card>
