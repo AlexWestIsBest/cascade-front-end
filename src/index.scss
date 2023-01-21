@@ -249,8 +249,8 @@ input:hover, textarea:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
   margin-left: auto;
   margin-right: auto;
   width: auto;
@@ -274,7 +274,6 @@ input:hover, textarea:hover {
 }
 .delDiv {
   display: flex;
-
   justify-content: center;
   margin: 2rem;
  color: red;
