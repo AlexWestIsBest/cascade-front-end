@@ -1,5 +1,5 @@
 # cascade-frontend
-Cascade FrontEnd is the front end for Cascade, a social media site built using the MERN stack. This site was built in collaboration with Alex West and Victoria Onyema as a mid term project during a General Assembly Software Immersive bootcamp.
+Cascade FrontEnd is the front end for Cascade, a social media site built using the MERN stack. This site was built as a collaboration between Alex West, Patrick Clary, and Victoria Onyema as a mid term project during a General Assembly Software Immersive bootcamp.
 
 * Roles:
   * Owner / Vision - Alex
