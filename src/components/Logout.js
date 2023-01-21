@@ -1,14 +1,12 @@
-import { useNavigate } from 'react-router-dom';
 import { logOut } from '../firebase';
 
 const Logout = ({ user, setUser }) => {
-    const navigate = useNavigate();
 
     // logout function
     const handleLogout = () => {
         logOut()
         setUser(null)
-        navigate('/login')
+        window.location.reload();
     }
 
     if (!user) {

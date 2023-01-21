@@ -244,3 +244,39 @@ input:hover, textarea:hover {
   display: flex;
   justify-content: flex-end;
 }
+.homePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  .updateForm {
+    display: flex;
+    flex-direction: column;;
+    align-items: flex-end;
+    padding: 1rem;
+    span {
+      margin: .5rem;
+      label {
+        margin: .5rem;
+      }
+    }
+  }
+}
+.delDiv {
+  display: flex;
+
+  justify-content: center;
+  margin: 2rem;
+ color: red;
+ text-decoration: underline;
+}
