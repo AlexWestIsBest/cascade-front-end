@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Navigation from './components/Navigation';
 import Main from './components/Main';
 import Footer from './components/Footer';
@@ -5,11 +6,19 @@ import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+  const [user, setUser] = useState(null);
+
   return (
     <div className="App">
       <div className= "container">
-        <Navigation />
-        <Main />
+        <Navigation 
+          user={user}
+          setUser={setUser}
+        />
+        <Main 
+          user={user}
+          setUser={setUser}
+        />
         <Footer />
       </div>
     </div>

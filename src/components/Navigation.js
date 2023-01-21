@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MDBIcon} from 'mdbreact';
 import 'bootstrap/dist/css/bootstrap.css';
+import { NavLink } from 'react-router-dom';
 import {
     MDBContainer,
     MDBNavbar,
@@ -8,14 +9,12 @@ import {
     MDBNavbarToggler,
     MDBNavbarNav,
     MDBNavbarItem,
-    MDBNavbarLink,
+    // MDBNavbarLink,
     MDBCollapse
   } from 'mdb-react-ui-kit';
+import Logout from './Logout';
 
-
-
-
-const Navigation = (props) => {
+const Navigation = ({ user, setUser}) => {
 
     const [showNav, setShowNav] = useState(false);
 
@@ -35,20 +34,37 @@ const Navigation = (props) => {
                     <MDBCollapse navbar show={showNav}>
                     <MDBNavbarNav>
                         <MDBNavbarItem>
-                        <MDBNavbarLink active aria-current='page' href='/'>
+                            <NavLink
+                                to="/"
+                                >Home
+                            </NavLink>
+                        {/* <MDBNavbarLink active aria-current='page' href='/'>
                             Home
-                        </MDBNavbarLink>
+                        </MDBNavbarLink> */}
                         </MDBNavbarItem>
                         <MDBNavbarItem>
-                        <MDBNavbarLink href='/newsfeed'>Newsfeed</MDBNavbarLink>
+                            <NavLink
+                                to="newsfeed"
+                                >Newsfeed
+                            </NavLink>
+                        {/* <MDBNavbarLink href='/newsfeed'>Newsfeed</MDBNavbarLink> */}
                         </MDBNavbarItem>
                         <MDBNavbarItem>
-                        <MDBNavbarLink href='/about'>About Us</MDBNavbarLink>
+                            <NavLink
+                                to="about"
+                                >About Us
+                            </NavLink>
+                        {/* <MDBNavbarLink href='/about'>About Us</MDBNavbarLink> */}
                         </MDBNavbarItem>
                     </MDBNavbarNav>
                     </MDBCollapse>
                 </MDBContainer>
+                <Logout 
+                    user={user}
+                    setUser={setUser}
+                />
             </MDBNavbar>
+
           </>
         );      
 

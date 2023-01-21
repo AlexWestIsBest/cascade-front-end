@@ -20,6 +20,7 @@ const EditableTextArea = ({ value, setValue, updatePost, id }) => {
         } 
     }
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const onInput = (target) => {
         if (target.scrollHeight > 16) {
             target.style.height = "5px"
