@@ -8,9 +8,9 @@ const Newsfeed = (props) => {
             <Card className="createPost" style={{ width: '30rem' }}>
                 <Card.Body>
                     <form action="">
-                        <input className="createInput" type="text" name="title" placeholder="Title" /><br />
+                        <input className="createInput" type="text" name="title" placeholder="Title" maxLength="24" /><br />
                         <input className="createInput" type="text" name="image" placeholder="Image URL" /><br />
-                        <input className="createInput" type="text" name="content" placeholder="Say something fun!" /><br />
+                        <input className="createInput" type="text" name="content" placeholder="Say something fun!" maxLength="24" /><br />
                         <button type="button" className='btn btn-primary'>Post</button>
                     </form>
                 </Card.Body>
