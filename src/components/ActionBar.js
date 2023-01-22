@@ -1,14 +1,14 @@
 import { MDBIcon } from 'mdb-react-ui-kit';
-import {useState} from 'react'
+import { useState } from 'react'
 
 const ActionBar = (props) => {
     const [count, setCount] = useState(0)
-    let isLiked = false
+    const [myLike, setMyLike] = useState(false)
+    
     const handleIncrement = () => {
         setCount(count + 1)
-        isLiked = true
+        setMyLike(true)
     }
-
 
     const handleDelete = () => {
         props.deletePost(props.id)
@@ -19,8 +19,9 @@ const ActionBar = (props) => {
             <button
                 className='likeButton'
                 onClick={handleIncrement}
-            >
-                <MDBIcon far icon="thumbs-up" />{count > 0 ? " " + count : ''}
+                style={{backgroundColor: myLike ? 'rgb(175, 220, 255)' : ''}}
+                >
+                <MDBIcon far icon="thumbs-up" />{count > 0 ? " " + count : ""}
             </button>
             <button className="deleteButton" onClick={handleDelete}><MDBIcon fas icon="trash-alt" /></button>
         </div>

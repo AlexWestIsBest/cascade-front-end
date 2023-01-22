@@ -28,18 +28,18 @@ const Post = (props) => {
     if (props.post.image === "") {
         return (
             <>
-            <Card style={{ width: '30rem' }}>
-                <Card.Title>
-                    <EditableText id={props.id} value={titleValue} setValue={setTitleValue} updatePost={updatePost} URL={props.URL} />
-                </Card.Title>
-                <Card.Body>
-                    <Card.Text>
-                        <EditableTextArea id={props.id} value={contentValue} setValue={setContentValue} updatePost={updatePost} URL={props.URL} />
-                    </Card.Text>
-                    <ActionBar id={props.id} URL={props.URL} deletePost={deletePost} /> 
-                </Card.Body>
-            </Card>
-        </>
+                <Card style={{ width: '30rem' }}>
+                    <Card.Title>
+                        <EditableText id={props.id} value={titleValue} setValue={setTitleValue} updatePost={updatePost} URL={props.URL} />
+                    </Card.Title>
+                    <Card.Body>
+                        <Card.Text>
+                            <EditableTextArea id={props.id} value={contentValue} setValue={setContentValue} updatePost={updatePost} URL={props.URL} />
+                        </Card.Text>
+                        <ActionBar id={props.id} URL={props.URL} deletePost={deletePost} updatePost={updatePost} /> 
+                    </Card.Body>
+                </Card>
+            </>
         )
     }
 
