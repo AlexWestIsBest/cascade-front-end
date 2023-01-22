@@ -7,24 +7,22 @@ export default function BasicTextFields({title, setPassword, setEmail, handleAct
         return (
             <div>
                 <div className="formPage">
-                    <h5>
-                        Welcome! Please login to continue. 
-                    </h5>
-                        <div className='loginForm'>
-                            <span>
-                                <label htmlFor="email">Email: </label>
-                                <input type="text" id="email" name="email" 
-                                    onChange={(e) => setEmail(e.target.value)}/>
-                            </span>
-                            <span>
-                                <label htmlFor="password">Password: </label>
-                                <input type="password" id='password' name="password"
-                                    onChange={(e) => setPassword(e.target.value)}/>
-                            </span>
-                        </div>
-                        <Button title={title} handleAction={handleAction} />
-                        <p>Need an account? <Link to="/register">
-                        Register</Link>! Still having trouble? <Link to="/reset">Reset password</Link>.</p>
+                    <h3>Welcome to Cascade!</h3>
+                    <div className='loginForm'>
+                        <span>
+                            <label htmlFor="email">Email: </label>
+                            <input type="text" id="email" name="email" 
+                                onChange={(e) => setEmail(e.target.value)}/>
+                        </span>
+                        <span>
+                            <label htmlFor="password">Password: </label>
+                            <input type="password" id='password' name="password"
+                                onChange={(e) => setPassword(e.target.value)}/>
+                        </span>
+                    </div>
+                    <Button title={title} handleAction={handleAction} />
+                    <p>Need an account? <Link to="/register">
+                    Register</Link>!<br />Still having trouble? <Link to="/reset">Reset password</Link>.</p>
                 </div>
             </div>
         );

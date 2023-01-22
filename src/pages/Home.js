@@ -106,13 +106,10 @@ const Home = ({ user }) => {
         return (
             <section>
             <div className='homePage'>
-                <h4>
-                    Hello {userName}!
-                </h4>
+                <h3>
+                    Welcome to Cascade
+                </h3>
                 <form className="updateForm" >
-                        <span>
-                            UID: {profile.uid}
-                        </span>
                         <span>
                             <label htmlFor="email">Email: </label>
                             <input 
@@ -156,7 +153,6 @@ const Home = ({ user }) => {
                         </button>
                 </form>
                 <div className="delDiv">
-                    <h5>Warning: Clicking here will delete your account!</h5>
                     <button
                         type="button"
                         className='btn btn-sm btn-danger' 
@@ -164,7 +160,9 @@ const Home = ({ user }) => {
                         ><span className="bi-trash"></span>&nbsp;Delete Account
                     </button>
                 </div>
-                <p>Post history coming soon...</p>
+                <span>
+                    UID: {profile.uid}
+                </span>
             </div>
             <ToastContainer />
             </section>

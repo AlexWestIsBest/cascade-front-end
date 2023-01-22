@@ -28,6 +28,7 @@ const EditableText = ({ value, setValue, updatePost, id }) => {
             onChange={onChange}
             onKeyDown={onKeyDown}
             onBlur={onBlur}
+            maxLength="24"
         />
     )
 }

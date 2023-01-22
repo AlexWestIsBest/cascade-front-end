@@ -24,10 +24,10 @@ const Navigation = ({ user, setUser}) => {
                 <MDBContainer fluid>
                     <MDBNavbarBrand className="logo"><h3>Cascade</h3></MDBNavbarBrand>
                     <MDBNavbarToggler
-                    type='button'
-                    aria-expanded='false'
-                    aria-label='Toggle navigation'
-                    onClick={() => setShowNav(!showNav)}
+                        type='button'
+                        aria-expanded='false'
+                        aria-label='Toggle navigation'
+                        onClick={() => setShowNav(!showNav)}
                     >
                     <MDBIcon icon='bars' fas />
                     </MDBNavbarToggler>
