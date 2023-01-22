@@ -7,7 +7,7 @@ export default function BasicTextFields({title, setPassword, setEmail, handleAct
         return (
             <div>
                 <div className="formPage">
-                    <h3>Welcome!<br />Please login to continue. </h3>
+                    <h3>Welcome to Cascade!</h3>
                     <div className='loginForm'>
                         <span>
                             <label htmlFor="email">Email: </label>
