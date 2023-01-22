@@ -45,6 +45,7 @@ const EditableTextArea = ({ value, setValue, updatePost, id }) => {
             onBlur={onBlur}
             onInput={onInput}
             ref={textareaRef}
+            maxLength="1000"
         />
     )
 }
