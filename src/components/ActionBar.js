@@ -13,8 +13,8 @@ const ActionBar = (props) => {
 
     return (
         <div className="actionBar">
-            <button onClick={handleIncrement}><MDBIcon far icon="thumbs-up" />{" " + count}</button>
-            <button onClick={handleDelete}><MDBIcon fas icon="trash-alt" /></button>
+            <button className="likeButton" onClick={handleIncrement}><MDBIcon far icon="thumbs-up" />{" " + count}</button>
+            <button className="deleteButton" onClick={handleDelete}><MDBIcon fas icon="trash-alt" /></button>
         </div>
     );
 }
