@@ -1,5 +1,7 @@
-# cascade-frontend
-Cascade FrontEnd is the front end for Cascade, a social media site built using the MERN stack. This site was built as a collaboration between Alex West, Patrick Clary, and Victoria Onyema as a mid term project during a General Assembly Software Immersive bootcamp.
+# Cascade (Front End)
+Welcome to Cascade, a social media site built using the MERN stack. This site was built as a collaboration between Alex Westerlund, Patrick Clary, and Victoria Onyema as a mid term project during a General Assembly Software Immersive bootcamp. Get started [here](https://thriving-syrniki-2edbeb.netlify.app/login).
+
+## Project Details
 
 * Roles:
   * Owner / Vision - Alex
@@ -13,7 +15,7 @@ Cascade FrontEnd is the front end for Cascade, a social media site built using t
 * Trello: https://trello.com/invite/b/CNGnsPwh/ATTIc6d50f7e1841f4617dafd0c7bd059c6e35BA25AB/socialmediasite
 * Heroku: 
    * BackEnd:  https://cascadesocial.herokuapp.com/
-   * FrontEnd: 
+   * FrontEnd: https://thriving-syrniki-2edbeb.netlify.app/login
    
 ## Technologies Used: 
 - JavaScript / jQuery
@@ -21,61 +23,29 @@ Cascade FrontEnd is the front end for Cascade, a social media site built using t
 - React
 - Express 
 - MongoDB / Mongoose
+- Firebase
 
 ## Screenshot(s):
+The login page, what you see when you first arrive:
 
-## Getting Started: 
-Instructions coming soon...
+![Imgur](https://i.imgur.com/LkfPJnX.png)
 
-### Features:
-- [ ] Header
-- [ ] Main Content
-- [ ] Footer
-- [ ] Navigation Bar
-- [ ] News Feed
-  - [ ] New / Edit / Delete Posts
-- [ ] Authentication
-  - [ ] New / Edit / Delete Users
+The newsfeed page, showing showing the content posted by users. In this image, the dropdown menu can also be seen:
+
+![Imgur](https://i.imgur.com/yByX8LC.png)
+
+## Features:
+- [x] Header
+- [x] Main Content
+- [x] Footer
+- [x] Navigation Bar
+- [x] News Feed
+  - [x] New / Edit Post
+  - [x] Delete Button, Like Button
+- [x] Authentication
+  - [x] New / Edit / Delete Users
 
 Stretch Goals:
 - [ ] New / Edit / Delete Comments
-
-## Application Technical Requirements/Deliverables
-
-- [ ] A **working** full-stack, single-page application hosted on Heroku & Netlify.
-
-- [ ] Incorporate the technologies of the **MERN-stack**:
-  - [ ] MongoDB/Mongoose
-  - [ ] Express
-  - [ ] React
-  - [ ] Node
-  - [ ] Bcrypt
-- [ ] **Have a well-styled interactive front-end** that communicates with the **Express ** backend via AJAX.
-
-- [ ] **Must follow MVC architecture**
-
-- [ ] **Include at least two of the four CRUD (Create, Retrieve, Update & Delete) data operations/actions (having all four are optional)**
-
-- [ ] **All team members are responsible for a minimum of 15 meaningful commits**
-
-- [ ] **(OPTIONAL)** you can try to implement one or more of the following:
-  - [ ] Consume a third-party API.
-  - [ ] Include _admin_ features.
-  - [ ] Client side routing to show multiple page-level components with React Router
-  - [ ] Authentication, i.e. the ability of a user to log in & log out.
-  - [ ] Authorization, by restricting functionality to authenticated users. Also, navigation should respond to the login status of the user.
-  
-## [](#best-practices)Best Practices
-
-- [ ] **Write DRY code.**
-
-- [ ] In a SPA, communication with the backend is via AJAX. Build **RESTful APIs to CRUD your data entities (resources)** and perform other functionality via AJAX. In a React app, those AJAX calls should be made from "service" modules, not components.
-
-- [ ] **Be consistent ** with your code style.
-
-- [ ] **Clearly name variables and functions** - remember, variables are usually named as **nouns ** and functions as **verbs**.
-
-- [ ] **Write well-formatted HTML/CSS/JS.** Properly formatting your code makes it more readable. Improperly formatted code infers sloppiness.
-
-- [ ] **Comment your code where it makes sense**. Most code is self-documenting, however, comments help explain complicated code.
-
+- [ ] Connect like buttons to backend
+- [ ] Likes and comments are linked to user's account
